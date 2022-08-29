@@ -43,7 +43,7 @@ app.get("/", function (request, response) {
 
         let query = `SELECT tb_projects.id, title, start_date, end_date, description, technologies, image, user_id, name 
         FROM tb_projects 
-        LEFT JOIN tb_users ON tb_projects.user_id = tb_users.id ORDER BY   DESC`
+        LEFT JOIN tb_users ON tb_projects.user_id = tb_users.id ORDER BY id  DESC`
         client.query(query, function (err, result) {
             
             if (err) throw err
@@ -108,7 +108,7 @@ app.get("/detail-project/:id", function (request, response) {
                     // } else {
                     //      technology = undefined
                     // }
-                    return  teknologi != 'undefined'? teknologi : undefined
+                    return  technology != 'undefined' ? technology : undefined
                 })
                 return {
                     ...items,
@@ -211,7 +211,7 @@ app.get("/update/:id", function (request, response) {
                     // } else {
                     //     return technology = undefined
                     // }
-                    return  teknologi != 'undefined'? teknologi : undefined
+                    return  technology != 'undefined'? technology : undefined
                 })
                 return {
                     ...items,
