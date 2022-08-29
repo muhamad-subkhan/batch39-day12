@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="icon" href="public/assets/images/logo.png">
+
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="public/assets/css/index.css">
+
+
+
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+
+    <nav class="navbar navbar-expand-lg sticky-lg-top navbar-light">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01"
+                aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse px-3" id="navbarTogglerDemo01">
+                <a href="/">
+                    <img class="navbar-brand navLogo" src="public/assets/images/logo.png"></img>
+                </a>
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="navbar-brand home fw-bolder mx-2 active" aria-current="page" href="/">Home</a>
+                    </li>
+                    {{#if isLogin}}
+                    <li class="nav-item fw-normal ms-2">
+                        <a class="navbar-brand addProject" aria-current="page" href="/add-project">Add Project</a>
+                    </li>
+                    {{/if}}
+                </ul>
+                {{#if isLogin}}
+                <a class="btn d-flex" href="/">Hallo {{user.name}}</a>
+                <a class="btn d-flex" href="/logout">Sign out</a>
+
+                {{else}}
+                <a class="btn d-flex" href="/register">register</a>
+                <a class="btn d-flex" href="/login">Login</a>
+                {{/if}}
+
+                <a class="btn d-flex" href="/contact-me">
+                    <button class="btn contactMe btn-dark px-4 py-1">Contact Me</button>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- BODY CARD -->
+    <section class="cardContent py-4 my-4">
+        <div class="container ">
+        {{#if messages.succes}}
+
+                <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                    <strong>Tahniah !!! </strong>{{messages.succes}}
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+
+            {{/if}}
+            <div class="card my-5  p-3 shadow rounded-3">
+                <div class="row">
+                    <div class="col-md-8">
+                        <div class="card-body m-3">
+                            <h2 class="card-title m-3 mx-3 fw-bold">Welcome To My hut</h2>
+                            <p class="card-text contentCard mb-5 px-3 py-3">Lorem ipsum dolor sit amet
+                                consectetur adipisicing elit.
+                                Voluptatum omnis quos itaque voluptates dolorum culpa error cumque fuga tempore porro
+                                reprehenderit, dignissimos quisquam placeat, quis odit enim alias explicabo natus.
+                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Similique consequatur
+                                reprehenderit quibusdam. Provident, placeat debitis! Eius provident nobis ab voluptatum
+                                impedit molestiae veritatis, recusandae cum itaque quas, veniam perspiciatis a!
+
+                            </p>
+
+                            <div class="card-btn m-3 mb-5">
+                                <a href="https://web.whatsapp.com/+6285161434927" target="_blank"
+                                    class="btn contact bg-dark text-light rounded-pill px-4 me-3">Contact</a>
+                                <a href="/public/assets/cv/CV baru.pdf" class="btn download" download="">Download <img src="public/assets/images/file_download.png" alt=""
+                                        class="align-baseline"></a>
+                            </div>
+
+                            <div class="icon-socmed">
+                              <a href="https://linkedin.com/in/muhamad-subkhan" target="_blank" class="socmed">
+                                  <span class="fa-stack">
+                                      <i class="fa-solid fa-circle fa-stack-2x"></i>
+                                      <i class="fa-brands fa-linkedin-in fa-stack-1x fa-inverse"></i>
+                                    </span>
+                              </a>
+              
+                              <a href="https://www.instagram.com/polar_beam" target="_blank" class="socmed">
+                              <span class="fa-stack">
+                                  <i class="fa-solid fa-circle fa-stack-2x"></i>
+                                  <i class="fa-brands fa-instagram fa-stack-1x fa-inverse"></i>
+                              </span>
+                              </a>
+              
+                              <a href="https://www.facebook.com/" target="_blank" class="socmed">
+                              <span class="fa-stack">
+                                  <i class="fa-solid fa-circle fa-stack-2x"></i>
+                                  <i class="fa-brands fa-facebook-f fa-stack-1x fa-inverse"></i>
+                              </span>
+                              </a>
+              
+                              <a href="https://twitter.com/" target="_blank" class="socmed">
+                              <span class="fa-stack">
+                                  <i class="fa-solid fa-circle fa-stack-2x"></i>
+                                  <i class="fa-brands fa-twitter fa-stack-1x fa-inverse"></i>
+                              </span>
+                              </a>
+                          </div>
+
+
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card shadow m-4">
+                            <img src="public/assets/images/kucing.webp" class="card-img" alt="image">
+                            <div class="card-body text-center rounded-3">
+                                <h5 class="nameCard fw-bold">MUHAMAD SUBKHAN</h5>
+                                <P class="fieldName fw-bold text-muted">Fullstack Developer</P>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <section class="card-detail bg-light py-5">
+        <div class="container py-5">
+                <h2 class="header-title text-center fw-bold py-4 mb-5 ">MY PROJECT</h2>
+            <div class="row d-flex justify-content-evenly cardFlex">
+                
+                <!-- CARD DYNAMIC -->
+                {{#each dataProject}}
+                <div class="cardPost col-sm-3 mt-3 mx-3">
+                    <div class="card-detail bg-body rounded-3 shadow px-3 py-3 mb-3">
+                        <img src="./uploads/{{this.image}}" class="card-img-top shadow rounded-3" alt="_blank">
+                        <div class="card-bodyDt mt-3">
+                            <a href="/detail-project/{{this.id}}" class="card-dt text-decoration-none title fs-4 fw-bolder text-dark">{{this.title}}</a>
+                            <p class="card-duration text-muted"><small> Duration: {{this.duration}} | {{this.name}}</small></p>
+                            
+                            
+                            <div>
+                                <p class="card-content text-truncate"> {{this.description}}</p>
+                            </div>  
+
+                           
+                            <div class="card-icon mt-5">
+                                {{#if this.technologies.[0]}}<i class="fa-brands {{this.technologies.[0]}} fs-1"></i>{{/if}}
+                                {{#if this.technologies.[1]}}<i class="fa-brands {{this.technologies.[1]}} fs-1 ms-3"></i>{{/if}}
+                                {{#if this.technologies.[2]}}<i class="fa-brands {{this.technologies.[2]}} fs-1 ms-3"></i>{{/if}}
+                                {{#if this.technologies.[3]}}<i class="fa-brands {{this.technologies.[3]}} fs-1 ms-3"></i>{{/if}}
+                            </div>
+                              
+                            {{#if this.isLogin}}
+                            <div class="card-dbtn d-flex mt-5">
+                                <a href="/update/{{this.id}}" class="btn btn-dark edit rounded w-100 me-4">edit</a>
+                                <a href="/delete/{{this.id}}" class="btn btn-dark delete rounded w-100 ">Delete</a>
+                            </div>                       
+                           {{/if}}
+
+                        </div>
+                    </div>
+                </div>
+                {{/each}}
+
+               </div>
+            </div> 
+    </section>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+</html>

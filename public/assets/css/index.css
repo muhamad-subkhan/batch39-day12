@@ -1,0 +1,71 @@
+ body{
+    background-color:rgb(220,227,228);
+ }
+ 
+ /* NAVBAR */
+nav{
+    background-color: rgba(244,243,243,255);
+    height: 7vh;
+}
+
+.navLogo{
+    width: 3rem;
+}
+
+.home:hover, .addProject:hover{
+    border-bottom: 1px solid orangered;
+}
+
+.contactMe:hover{
+    background-color: orangered;
+    border: 1px solid orangered;
+}
+
+    /* CARD */
+.cardContent{
+    height: max-content;
+}
+
+.contentCard{
+    text-align: justify;
+}
+
+.contact:hover{
+    background-color: orangered !important;
+}
+
+.align-baseline{
+    width: 17px;
+    height: 15px;
+}
+
+.socmed{
+    color: black;
+    text-decoration: none;
+}
+
+.icon-socmed{
+    font-size: 24px;
+}
+
+.fa-stack:hover{
+    color: orangered;
+}
+
+    /* PROJECT */
+.card-detail{
+    width: 100%;
+}
+
+
+.cardPost{
+    width: 30%;
+}
+.title:hover{
+    color: blue !important;
+}
+
+.edit:hover, .delete:hover{
+    background-color: orangered;
+    border: 1px solid orangered;
+}

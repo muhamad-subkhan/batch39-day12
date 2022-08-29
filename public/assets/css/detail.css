@@ -1,0 +1,30 @@
+/* NAVBAR */
+nav{
+    background-color: rgba(244,243,243,255);
+    height: 7vh;
+}
+
+.navLogo{
+    width: 3rem;
+}
+
+.home:hover, .addProject:hover{
+    border-bottom: 1px solid orangered;
+}
+
+.contactMe:hover{
+    background-color: orangered;
+    border: 1px solid orangered;
+}
+
+
+/* CARD */
+
+.detail{
+    background-color:rgb(220,227,228);
+    height: 93vh;
+}
+.card-img{
+    width: 100%;
+    height: 300px;
+}

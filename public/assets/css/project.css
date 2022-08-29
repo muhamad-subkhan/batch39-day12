@@ -1,0 +1,50 @@
+/* NAVBAR */
+nav{
+    background-color: rgba(244,243,243,255);
+    height: 7vh;
+}
+
+.navLogo{
+    width: 3rem;
+}
+
+.home:hover, .addProject:hover{
+    border-bottom: 1px solid orangered;
+}
+
+.contactMe:hover{
+    background-color: orangered;
+    border: 1px solid orangered;
+}
+
+/* FORM */
+.project{
+    background-color:rgb(220,227,228);
+    height: 93vh;
+}
+
+.formCard{
+    width: 550px;
+}
+
+textarea{
+    height: 100px !important;
+    resize: none;
+}
+
+.input-group-text{
+    background-color: white;
+}
+img{
+    width: 20px;
+}
+
+button{
+    border-radius: 15px !important;
+    padding: 0px 25px !important;
+}
+
+button:hover{
+    background-color:orangered !important;
+    border: 1px solid orangered !important;
+}
