@@ -45,7 +45,7 @@ app.get("/", function (request, response) {
         FROM tb_projects 
         LEFT JOIN tb_users ON tb_projects.user_id = tb_users.id ORDER BY id  DESC`
         client.query(query, function (err, result) {
-            
+            done()
             if (err) throw err
             let dataProject = result.rows
 
@@ -84,7 +84,6 @@ app.get("/", function (request, response) {
                 isLogin: request.session.isLogin
             }) 
         })
-        done()
     })
 })
 
